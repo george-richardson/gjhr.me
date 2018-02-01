@@ -13,3 +13,4 @@ deploy:
   bucket: gjhr.me
   skip_cleanup: true
   local_dir: _site
+  region: eu-west-1
