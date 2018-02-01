@@ -1,0 +1,13 @@
+title: George Richardson's Blog
+author: George Richardson
+description: Hopefully an interesting blog.  
+baseurl: "" 
+url: "" 
+github_username:  sonotude
+markdown: kramdown
+plugins:
+  - jekyll-feed
+compress_html:
+  clippings: all
+  comments: all
+highlighter: rouge
