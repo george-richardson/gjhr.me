@@ -1,7 +1,6 @@
 ---
 layout: page
 title: "#contact"
-permalink: /contact/
 ---
 
 <div style="display: inline-flex; flex-direction: row-reverse; justify-content: flex-end;">
