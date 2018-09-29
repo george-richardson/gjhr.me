@@ -6,6 +6,10 @@ title: "#projects"
 
 Unfortunately not a lot here at the moment, check out [my GitHub](https://github.com/george-richardson) for a few bits and bobs.
 
+## terraform_s3_cloudfront_static_site
+
+[A terraform module](https://github.com/george-richardson/terraform_s3_cloudfront_static_site) for creating static websites hosted in S3 and distributed through cloudfront. Perfect for use with site generation tools such as Jekyll (like this website). 
+
 # Non-Tech
 
 ## HWAH Comedy
