@@ -2,15 +2,34 @@ language: ruby
 rvm:
 - 2.3.3
 
+env:
+  global:
+    - PATH=$HOME/.local/bin:$PATH
+
 script: bundle exec jekyll build
 
+before_deploy:
+  - curl -fSL "https://releases.hashicorp.com/terraform/0.11.11/terraform_0.11.11_linux_amd64.zip" -o terraform.zip
+  - sudo unzip terraform.zip -d /opt/terraform
+  - sudo ln -s /opt/terraform/terraform /usr/bin/terraform
+  - rm -f terraform.zip
+  - pip install --user awscli
+
 deploy:
-  on:
-    branch: master
-  provider: s3
-  access_key_id: $AWS_ACCESS_KEY_ID
-  secret_access_key: $AWS_SECRET_ACCESS_KEY
-  bucket: gjhr.me
-  skip_cleanup: true
-  local_dir: _site
-  region: eu-west-1
+  - provider: script
+    on:
+      branch: master
+    skip_cleanup: true
+    script: "./deploytf.sh"
+  - provider: s3
+    on:
+      branch: master
+    access_key_id: $AWS_ACCESS_KEY_ID
+    secret_access_key: $AWS_SECRET_ACCESS_KEY
+    bucket: gjhr.me
+    skip_cleanup: true
+    local_dir: _site
+    region: eu-west-1
+
+after_deploy:
+  - aws cloudfront create-invalidation --distribution-id E3AI95P0PTTR3D --paths /* 
