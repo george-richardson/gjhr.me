@@ -16,15 +16,16 @@ provider "aws" {
 }
 
 module "static_site" {
-  source = "git::https://github.com/george-richardson/terraform_s3_cloudfront_static_site.git?ref=1.0.2"
+  source = "git::https://github.com/george-richardson/terraform_s3_cloudfront_static_site.git?ref=1.1.0"
 
   providers {
     aws.useast1 = "aws.useast1"
   }
 
-  name           = "gjhr.me"
-  hosted_zone_id = "Z15BU6M9B86ACI"
-  region         = "eu-west-1"
+  name             = "gjhr.me"
+  hosted_zone_id   = "Z15BU6M9B86ACI"
+  region           = "eu-west-1"
+  error_404_object = "/404.html"
 
   tags = {
     website = "gjhr.me"
