@@ -3,17 +3,17 @@ layout: page
 title: "#about"
 ---
 
-# Career
+## Career
 
 I am a "devops" engineer, although I would argue the role should not exist. I currently work at InsightSoftware.
 
-# Education
+## Education
 
-I have a first class bachelors degree in computer science from Queen Mary, University of London. 
+I have a first class bachelors degree in computer science from Queen Mary, University of London. For my final year project I made a platform for executing map reduce jobs written in Haskell across multiple computers.
 
-For my final year project I made a platform for executing map reduce jobs written in Haskell across multiple computers.
+I have also attained the [AWS Certified Developer - Associate (DVA)](https://www.certmetrics.com/amazon/public/badge.aspx?i=2&t=c&d=2018-11-28&ci=AWS00301012) certification.  
 
-# Hobbies
+## Hobbies
 
 * Painting miniature men for the tabletop game Warhammer 40,000.
 * Playing Dungeons and Dragons once a week, currently with a wood elf monk who punches a whole lot of things... and runs up walls.
