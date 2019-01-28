@@ -10,6 +10,10 @@ Unfortunately not a lot here at the moment, check out [my GitHub](https://github
 
 [A terraform module](https://github.com/george-richardson/terraform_s3_cloudfront_static_site) for creating static websites hosted in S3 and distributed through cloudfront. Perfect for use with site generation tools such as Jekyll (like this website). 
 
+### route-ddns
+
+[A ddns client written in go](https://github.com/george-richardson/route-ddns) that updates AWS Route53 records when a public IP address change is detected.
+
 ## Non-Tech
 
 ### HWAH Comedy
