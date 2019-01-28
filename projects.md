@@ -4,7 +4,7 @@ title: "#projects"
 ---
 ## Tech
 
-Some select projects of mine are selected below, check out [my GitHub](https://github.com/george-richardson) for a few more bits and bobs.
+Some select projects of mine are listed below, check out [my GitHub](https://github.com/george-richardson) for a few more bits and bobs.
 
 ### terraform_s3_cloudfront_static_site
 
