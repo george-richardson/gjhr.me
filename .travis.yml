@@ -23,7 +23,8 @@ deploy:
     skip_cleanup: true
     local_dir: _site
     region: eu-west-1
-
-after_script:
-  - pip install --user awscli
-  - aws cloudfront create-invalidation --distribution-id E3AI95P0PTTR3D --paths '/*' 
+  - provider: script
+    on:
+      branch: master
+    skip_cleanup: true
+    script: "pip install --user awscli && aws cloudfront create-invalidation --distribution-id E3AI95P0PTTR3D --paths '/*'"
