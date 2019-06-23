@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "An idea for commit message prefixes"
-date:   2019-06-23 12:00:00 +0000
+date:   2019-06-23 11:00:00 +0000
 ---
 
 I always want to be able to see what type of change a commit contains at a glance but also don't want to waste the precious characters that can fit on the first line. There have already been attempts to [standardise commit message formats](https://www.conventionalcommits.org/en/v1.0.0-beta.4/) but I have usually found the rules are either overbearing or the boilerplate is too long for my tastes. As such here is my attempt at a system that I will be using in my personal projects starting from the commit of this blog post!
