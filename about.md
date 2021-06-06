@@ -11,7 +11,7 @@ I am a "devops" engineer, although I would argue the role should not exist. I cu
 
 I have a first class bachelors degree in computer science from Queen Mary, University of London. For my final year project I made a platform for executing map reduce jobs written in Haskell across multiple computers.
 
-I have also attained the [AWS Certified DevOps Engineer - Professional (DOP)](https://www.certmetrics.com/amazon/public/badge.aspx?i=5&t=c&d=2019-06-19&ci=AWS00301012) and [AWS Certified Developer - Associate (DVA)](https://www.certmetrics.com/amazon/public/badge.aspx?i=2&t=c&d=2018-11-28&ci=AWS00301012) certifications.  
+I have also attained the [AWS Certified DevOps Engineer - Professional (DOP)](https://www.certmetrics.com/amazon/public/badge.aspx?i=5&t=c&d=2019-06-19&ci=AWS00301012), [AWS Certified Developer - Associate (DVA)](https://www.certmetrics.com/amazon/public/badge.aspx?i=2&t=c&d=2018-11-28&ci=AWS00301012) and Azure Developer Associate certifications.  
 
 ## Hobbies
 
