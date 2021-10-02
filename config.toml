@@ -13,3 +13,9 @@ markup.goldmark.renderer.unsafe = true
 [outputFormats.RSS]
 mediatype = "application/rss"
 baseName = "feed"
+
+[deployment]
+[[deployment.targets]]
+name = "s3"
+URL = "s3://gjhr.me?region=eu-west-1"
+cloudFrontDistributionID = "E3AI95P0PTTR3D"

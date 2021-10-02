@@ -15,14 +15,6 @@ jobs:
       - name: Deploy Terraform
         run: ./.github/scripts/deploytf.sh
         shell: bash
-      - name: Install AWSCLI
-        run: pip install --user awscli
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 2.3.3
-          bundler-cache: true 
-      - name: Build Jekyll
-        run: bundle exec jekyll build
-      - name: Deploy to S3
-        run: "aws s3 sync --delete ./_site s3://gjhr.me/ && aws cloudfront create-invalidation --distribution-id E3AI95P0PTTR3D --paths '/*'"
+      - name: Deploy Website
+        run: ./.github/scripts/deployhugo.sh
+        shell: bash
