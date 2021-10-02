@@ -12,6 +12,8 @@ jobs:
       AWS_SECRET_ACCESS_KEY : ${{ secrets.AWS_SECRET_ACCESS_KEY }}
     steps:
       - uses: actions/checkout@v2
+        with: 
+          lfs: true
       - name: Deploy Terraform
         run: ./.github/scripts/deploytf.sh
         shell: bash
