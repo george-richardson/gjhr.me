@@ -1,11 +1,11 @@
 ---
-layout: page
 title: "#about"
+menu: main
 ---
 
 ## Career
 
-I am a "devops" engineer, although I would argue the role should not exist. I currently work at InsightSoftware.
+I am a "devops" engineer, although I would argue the role should not exist. I currently work at The Scale Factory.
 
 ## Education
 

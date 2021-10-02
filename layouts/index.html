@@ -1,0 +1,11 @@
+{{ define "main" }}
+<ul>
+  {{ range ( where .Site.RegularPages "Type" "posts" ) }}
+    <li>
+      <span>{{ .Date.Format "Jan 2, 2006" }}</span> - <a href="{{.RelPermalink}}">{{ .Title }}</a>
+    </li>
+  {{ end }}
+</ul>
+
+<p>subscribe <a  href="/feed.xml" />via RSS</a></p>
+{{ end }}

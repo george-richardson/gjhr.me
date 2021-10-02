@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "A ddns client written in go"
 date:   2019-02-02 10:00:00 +0000
 ---

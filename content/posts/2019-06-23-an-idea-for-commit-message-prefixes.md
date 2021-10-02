@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "An idea for commit message prefixes"
 date:   2019-06-23 11:00:00 +0000
 ---

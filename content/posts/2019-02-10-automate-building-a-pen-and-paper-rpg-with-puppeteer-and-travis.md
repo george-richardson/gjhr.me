@@ -1,7 +1,7 @@
 ---
-layout: post
 title:  "Automate building a pen & paper RPG with Puppeteer and Travis"
 date:   2019-02-10 15:00:00 +0000
+url:    "2019/02/10/automate-building-a-pen-and-paper-rpg-with-puppeteer-and-travis.html"
 ---
 
 A couple of my friends and I have a podcast where we play stupid one page RPGs called [GORM](https://gormpodcast.com). Recently we have started dabbling with creating our own RPGs to varying success, my first attempt "[Law, Order and Sentencing](https://gormpodcast.com/rpgs/Law%20Order%20And%20Sentencing.pdf)" has myriad issues [^1] [^2] but I want to focus in this post on the actual creation of the PDF and how I have hopefully improved the process for my second attempt "[Pyramids](https://pyramids.gormpodcast.com/)". 
@@ -10,7 +10,7 @@ A couple of my friends and I have a podcast where we play stupid one page RPGs c
 
 I originally drafted LOaS in a word document which I sent to a friend of mine who I knew had an Adobe Creative Cloud subscription and access to its InDesign publishing offering. I think he did a really good job on the first draft with formatting.
 
-![The LOaS PDF](/assets/postmedia/LOaS.PNG)
+![The LOaS PDF](/LOaS.PNG)
 
 As this was a first draft I had not thoroughly proof read my original document and so of course quite a few grammatical errors and typos got through. This lead me to my first publishing epiphany: __don't send the first draft to get the fancy formatting__. Now I would need to make a list of changes to send to my friend for him to update, heaven forbid I add a sentence and he has to reflow the whole document. Luckily this wasn't an issue my friend had to worry about as by this time his Adobe CC subscription had expired and I wasn't going to shell out £50/mo to get it myself. The end result is that we just kept the crap first version and will try to do better next time. 
 
@@ -64,7 +64,7 @@ After some googling it turns out I was doing a few things wrong, mostly because 
 chrome.exe --headless --print-to-pdf="D:\pyramids.pdf" file:///D:/pyramids.html
 ```
 Awww yeah a PDF appeared, lets have a look:
-![Headless Chrome CLI Attempt](/assets/postmedia/PyramidsHeadlessChromeCLI.PNG)
+![Headless Chrome CLI Attempt](/PyramidsHeadlessChromeCLI.PNG)
 
 So clearly I had done something wrong here. Aside from the obvious lack of text it would also be nice to remove the auto-generated header and footer. Some trawling through the Headless Chrome documentation made it clear that the CLI didn't have many options for PDF printing and I wouldn't be able to get what I wanted. However, the CLI is not the only interface for Headless Chrome and it became clear that I should actually be using its DevTools protocol through the node package [Puppeteer](https://github.com/GoogleChrome/puppeteer).
 
@@ -101,7 +101,7 @@ var absoluteHtmlPath = path.resolve("pyramids.html");
 ```
 
 And an example of its glorious output after some HTML reflow and CSS updates:
-![Headless Chrome Puppeteer Attempt](/assets/postmedia/PyramidsHeadlessChromePuppeteer.PNG)
+![Headless Chrome Puppeteer Attempt](/PyramidsHeadlessChromePuppeteer.PNG)
 
 # Hiring Another Guy To Do It For You
 

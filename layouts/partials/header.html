@@ -1,0 +1,9 @@
+
+<header class="flex-spaced" id="main-header">
+  <a href="/"><h1>George Richardson</h1></a>
+  <div class="flex-spaced" id="header-links">
+    {{ range .Site.Menus.main }}
+    <a href="{{ .URL }}">{{ .Name }}</a>
+    {{ end }}
+  </div>
+</header>

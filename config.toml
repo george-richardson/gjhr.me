@@ -1,0 +1,15 @@
+baseURL = ''
+languageCode = 'en-gb'
+title = "George Richardson's Blog"
+description = 'Hopefully an interesting blog...'
+uglyurls = true
+
+markup.goldmark.renderer.unsafe = true
+
+[permalinks]
+  posts = '/:year/:month/:day/:title'
+
+[outputFormats]
+[outputFormats.RSS]
+mediatype = "application/rss"
+baseName = "feed"

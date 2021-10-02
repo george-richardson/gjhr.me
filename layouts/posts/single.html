@@ -1,0 +1,15 @@
+{{define "main"}}
+
+<article itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    <h1 itemprop="name headline">{{ .Title }}</h1>
+    <p>
+      <time {{ printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") | safeHTMLAttr }} itemprop="datePublished">
+        {{- .Date.Format "Jan 2, 2006" -}}
+      </time>
+  </header>
+  <div itemprop="articleBody">
+    {{ .Content }}
+  </div>
+</article>
+{{end}}

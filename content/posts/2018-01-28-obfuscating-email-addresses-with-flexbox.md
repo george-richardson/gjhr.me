@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Obfuscating email addresses with flexbox"
 date:   2018-01-28 17:45:21 +0000
 ---

@@ -1,6 +1,6 @@
 ---
-layout: page
 title: "#projects"
+menu: main
 ---
 ## Tech
 
