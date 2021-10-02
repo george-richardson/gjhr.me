@@ -12,5 +12,5 @@ hugo version
 which hugo
 
 echo "Building and deploying website"
-hugo
+hugo --minify
 hugo deploy
