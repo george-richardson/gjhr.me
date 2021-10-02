@@ -1,4 +1,4 @@
-baseURL = ''
+baseURL = 'gjhr.me'
 languageCode = 'en-gb'
 title = "George Richardson's Blog"
 description = 'Hopefully an interesting blog...'
