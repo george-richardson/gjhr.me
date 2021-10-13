@@ -8,8 +8,12 @@
         {{- .Date.Format "Jan 2, 2006" -}}
       </time>
   </header>
+  {{ if isset .Params "externallink" }}
+  Find this article on <a href="{{.Params.externallink}}" target="_blank">{{ index (split .Params.externallink "/") 2 }}</a>.
+  {{ else }}
   <div itemprop="articleBody">
     {{ .Content }}
   </div>
+  {{ end }}
 </article>
 {{end}}
