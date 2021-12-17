@@ -9,4 +9,5 @@ pagestyles: |
   ul li:not(:last-child) {
     margin-bottom: 0.5em;
   }
+title: Home
 ---
