@@ -8,6 +8,11 @@
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
   {{ end -}}
   {{ partial "styles.html" . }}
+  {{ if .Params.pagestyles }}
+  <style>
+    {{ .Params.pagestyles | safeCSS }}
+  </style>
+  {{ end }}
   <script defer data-domain="gjhr.me" src="https://plausible.io/js/plausible.js"></script>
 </head>
   

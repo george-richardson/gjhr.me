@@ -1,13 +1,13 @@
 {{ define "main" }}
-<ul style="list-style-type:none; padding:0">
+<ul class="index-list">
   {{ range ( where .Site.RegularPages "Type" "posts" ) }}
     {{ if isset .Params "externallink" }}
     <li>
-      <span class="monospace">{{ .Date.Format "Jan 02, 2006" }}</span> - ({{ index (split .Params.externallink "/") 2 }}) <a href="{{.Params.externallink}}" target="_blank">{{ .Title }}</a>
+      {{ .Date.Format "January 02, 2006" }}<br>({{ index (split .Params.externallink "/") 2 }}) <a href="{{.Params.externallink}}" target="_blank">{{ .Title }}</a>
     </li>
     {{ else }}
     <li>
-      <span class="monospace">{{ .Date.Format "Jan 02, 2006" }}</span> - <a href="{{.RelPermalink}}">{{ .Title }}</a>
+      {{ .Date.Format "January 02, 2006" }}<br><a href="{{.RelPermalink}}">{{ .Title }}</a>
     </li>
     {{ end }}
   {{ end }}

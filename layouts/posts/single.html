@@ -3,10 +3,9 @@
 <article itemscope itemtype="http://schema.org/BlogPosting">
   <header>
     <h1 itemprop="name headline">{{ .Title }}</h1>
-    <p>
-      <time {{ printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") | safeHTMLAttr }} itemprop="datePublished">
-        {{- .Date.Format "Jan 2, 2006" -}}
-      </time>
+    <time {{ printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") | safeHTMLAttr }} itemprop="datePublished">
+      {{- .Date.Format "January 2, 2006" -}}
+    </time>
   </header>
   {{ if isset .Params "externallink" }}
   Find this article on <a href="{{.Params.externallink}}" target="_blank">{{ index (split .Params.externallink "/") 2 }}</a>.
