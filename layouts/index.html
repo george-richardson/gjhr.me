@@ -1,15 +1,27 @@
 {{ define "main" }}
 <ul class="index-list">
   {{ range ( where .Site.RegularPages "Type" "posts" ) }}
-    {{ if isset .Params "externallink" }}
     <li>
-      <span class="small">{{ .Date.Format "January 02, 2006" }} on {{ index (split .Params.externallink "/") 2 }}</span><br><a href="{{.Params.externallink}}" target="_blank">{{ .Title }}</a> <a class="small" href="https://web.archive.org/web/1000/{{.Params.externallink}}" target="_blank">(archive.org)</a>
+      <span class="small">
+        {{ .Date.Format "January 02, 2006" }}
+        {{ if isset .Params "externallink" }} 
+          🌐 
+          {{ if eq .Params.externalType "podcast" }}
+            podcast appearance
+          {{ else }}
+            blog post
+          {{ end }}
+          on {{ cond (isset .Params "externalname") .Params.externalname (index (split .Params.externallink "/") 2) }}
+        {{ end }}
+      </span>
+      <br />
+      {{ if isset .Params "externallink" }}
+        <a href="{{.Params.externallink}}" target="_blank">{{ .Title }}</a>
+        <a class="small" href="https://web.archive.org/web/1000/{{.Params.externallink}}" target="_blank">(archive.org)</a>
+      {{ else }}
+        <a href="{{.RelPermalink}}">{{ .Title }}</a>
+      {{ end }}
     </li>
-    {{ else }}
-    <li>
-      <span class="small">{{ .Date.Format "January 02, 2006" }}</span><br><a href="{{.RelPermalink}}">{{ .Title }}</a>
-    </li>
-    {{ end }}
   {{ end }}
 </ul>
 
