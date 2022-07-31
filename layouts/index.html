@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{ partial "about-short.html" . }}
 <ul class="index-list">
   {{ range ( where .Site.RegularPages "Type" "posts" ) }}
     <li>

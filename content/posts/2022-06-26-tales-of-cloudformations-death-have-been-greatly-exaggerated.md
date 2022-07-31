@@ -5,7 +5,7 @@ date: 2022-06-26 08:01:00 +0000
 
 I recently saw some [sad nerd on the Internet]({{< ref "/posts/2022-06-26-cloudformation-is-dead-long-live-terraform" >}}) besmirch the good name of CloudFormation. They insinuated that this noble, battle-tested technology is actually worn out abandonware that should be discarded in favour of Terraform, the flavour of the week IaC tool. BAH! I’m here to set the record straight. 
 
-![A skeleton takes a call while working on its laptop at a cafe](/coffeeskeleton.jpg "'I may be old, but I'm still here darnit!'")
+![A skeleton takes a call while working on its laptop at a cafe](/coffeeskeleton.jpg "'I may be old, but I'm still here darnit!' (istock/ocipalla)")
 
 ## CloudFormation Is Always There for You (and Your Customers)
 

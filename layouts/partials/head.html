@@ -7,12 +7,12 @@
   {{ with .OutputFormats.Get "rss" -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
   {{ end -}}
-  {{ partial "styles.html" . }}
+  <style type="text/css">
+  {{ partial "styles.css" . | safeCSS }}
   {{ if .Params.pagestyles }}
-  <style>
     {{ .Params.pagestyles | safeCSS }}
-  </style>
   {{ end }}
+  </style>
   <script defer data-domain="gjhr.me" src="https://plausible.io/js/plausible.js"></script>
 </head>
   

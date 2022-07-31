@@ -5,7 +5,7 @@ date: 2022-06-26 08:00:00 +0000
 
 If CloudFormation were a person, it would be just starting secondary school, worrying about looking cool to its new friends, yet not old enough to drink or drive. If CloudFormation were a dog it would be enjoying its twilight years, lying in bed, chasing squirrels out of habit with no expectation of catching them. Unfortunately, CloudFormation is software... neglected software. CloudFormation is a draugr, a zombie, a lich. CloudFormation should have a stake thrust through its heart and its brain stem destroyed before being buried in a uranium box at the bottom of the deepest ocean.
 
-![A robot skeleton silently screams](/technolich.jpg "Found inside a server rack in us-east-1.")
+![A robot skeleton silently screams](/technolich.jpg "Found inside a server rack in us-east-1. (istock/grandeduc)")
 
 The lich that is CloudFormation was once a comely prince. In 2010, it offered a fresh perspective on cloud infrastructure. You could now define your resources declaratively, no more keeping track of hundreds of manually created resources across all the different AWS services. Now you can put them all in a text file and have a centralised place to configure and manage them. Brilliant! But the honeymoon period is over, other tools have come along that have improved on the concept. If CloudFormation was King, it’s looking like Terraform will be our Robespierre.   
 
