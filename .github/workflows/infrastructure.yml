@@ -1,15 +1,19 @@
-name: BuildAndDeploy
+name: Infrastructure
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
+    paths:
+      - 'infra/**'
+      - '.github/**'
 
 permissions:
   id-token: write
   contents: read
 
 jobs:
-  build:
+  terraform:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -19,16 +23,17 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1
         with:
           role-to-assume: arn:aws:iam::000106928613:role/GitHub
-          role-session-name: gjhr-buildanddeploy
+          role-session-name: gjhr-infrastructure
           aws-region: eu-west-1
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
         with:
           terraform_version: 1.2.9
-      - name: Deploy Terraform
-        run: terraform init -input=false && terraform apply -auto-approve
+      - name: Terraform Init
+        run: terraform init -input=false
         shell: bash
         working-directory: infra
-      - name: Deploy Website
-        run: ./.github/scripts/deployhugo.sh
+      - name: Terraform Apply
+        run: terraform apply -auto-approve
         shell: bash
+        working-directory: infra
