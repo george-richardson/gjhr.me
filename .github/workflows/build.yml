@@ -22,7 +22,7 @@ jobs:
           role-session-name: gjhr-buildanddeploy
           aws-region: eu-west-1
       - name: Deploy Terraform
-        run: ./.github/scripts/deploytf.sh
+        run: ../.github/scripts/deploytf.sh
         shell: bash
         working-directory: infra
       - name: Deploy Website
