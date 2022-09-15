@@ -1,22 +1,30 @@
 name: BuildAndDeploy
 
-on: 
+on:
   push:
     branches: [ master ]
+
+permissions:
+  id-token: write
+  contents: read
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY : ${{ secrets.AWS_SECRET_ACCESS_KEY }}
     steps:
       - uses: actions/checkout@v2
-        with: 
+        with:
           lfs: true
+      - name: configure aws credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: arn:aws:iam::000106928613:role/GitHub
+          role-session-name: gjhr-buildanddeploy
+          aws-region: eu-west-1
       - name: Deploy Terraform
         run: ./.github/scripts/deploytf.sh
         shell: bash
+        working-directory: infra
       - name: Deploy Website
         run: ./.github/scripts/deployhugo.sh
         shell: bash
