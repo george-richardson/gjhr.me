@@ -21,8 +21,12 @@ jobs:
           role-to-assume: arn:aws:iam::000106928613:role/GitHub
           role-session-name: gjhr-buildanddeploy
           aws-region: eu-west-1
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: 1.2.9
       - name: Deploy Terraform
-        run: ../.github/scripts/deploytf.sh
+        run: terraform init -input=false && terraform apply -auto-approve
         shell: bash
         working-directory: infra
       - name: Deploy Website
