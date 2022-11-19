@@ -23,7 +23,7 @@ As gross as YAML can sometimes be, at least it's a standard used across hundreds
 
 Stack sets is a killer feature. They allow you to deploy the same CloudFormation stack across multiple accounts. This is especially useful in compliance scenarios when using a multi-account architecture, you are going to have to deploy the exact same resources to potentially dozens of accounts. With Terraform, that process would involve configuring a provider (or workspace in Terraform Cloud) for every single account and likely some custom build pipelines to boot. With stack sets, you write one YAML file and can deploy it to an AWS Organizations OU or a list of accounts. Easy. Stack sets can even automatically deploy to new accounts, streamlining your account vending process.
 
-When combined with AWS Organizations service control policies that unwanted modification of the deployed resources, CloudFormation stack sets give you a rock solid system to implement your compliance controls with.
+When combined with AWS Organization's Service Control Policies that prevent unwanted modification of the deployed resources, CloudFormation stack sets give you a rock solid system to implement your compliance controls with.
 
 ## Use the Right Tool for the Job
 
