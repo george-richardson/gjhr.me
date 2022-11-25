@@ -13,7 +13,7 @@ Connect with me on <a href="https://www.linkedin.com/in/george-richardson-81551a
 
 I have a first class bachelors degree in computer science from Queen Mary, University of London. For my final year project I made a platform for executing map reduce jobs written in Haskell across multiple computers.
 
-I have also attained the AWS Certified Solutions Architect – Professional (SAP), AWS Certified Security - Specialty (SCS) and Azure Developer Associate certifications.
+I have also attained the AWS Certified Solutions Architect – Professional (SAP), AWS Certified Security - Specialty (SCS), Azure Developer Associate and HashiCorp Certified: Terraform Associate certifications.
 
 <div style="display: flex; justify-content: space-evenly; flex-wrap: wrap;">
 
@@ -22,6 +22,8 @@ I have also attained the AWS Certified Solutions Architect – Professional (SAP
 <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="9ed61a8a-cb18-4cd5-b013-50fcf891e233" data-share-badge-host="https://www.credly.com"></div>
 
 <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="187d7cb5-0329-4925-9f18-a8a0324e433b" data-share-badge-host="https://www.credly.com"></div>
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="6ed415f3-c393-4f48-a561-431d28ae10fa" data-share-badge-host="https://www.credly.com"></div>
 
 <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
