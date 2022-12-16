@@ -9,6 +9,8 @@
           🌐 
           {{ if eq .Params.externalType "podcast" }}
             podcast appearance
+          {{ else if .Params.externalType }}
+            {{ .Params.externalType }}
           {{ else }}
             blog post
           {{ end }}
