@@ -51,13 +51,3 @@ resource "aws_route53_record" "fastmail_dkim_3" {
   ttl     = 3600
   records = ["fm3.gjhr.me.dkim.fmhosted.com"]
 }
-
-# Temporary migration records
-
-resource "aws_route53_record" "temp_trackhammer" {
-  zone_id = aws_route53_zone.gjhr_me.zone_id
-  name    = "trackhammer.gjhr.me"
-  type    = "CNAME"
-  ttl     = 60
-  records = ["dgush7i5ti2nm.cloudfront.net."]
-}
