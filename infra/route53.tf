@@ -10,27 +10,46 @@ resource "aws_route53_record" "txt" {
   type    = "TXT"
   ttl     = 3600
   records = [
-    "v=spf1 include:outlook.com -all",                                     # Outlook
+    "v=spf1 include:spf.messagingengine.com ?all",                         # Fastmail
     "google-site-verification=8gF9yPO5sAgTnTT8AF8Q0lCut2jI9JXP8pVFMRF1M4k" # Goolge search console
   ]
 }
 
-# Outlook.com
+# Fastmail.com
 
-resource "aws_route53_record" "outlook_mx" {
+resource "aws_route53_record" "fastmail_mx" {
   zone_id = aws_route53_zone.gjhr_me.zone_id
   name    = "gjhr.me"
   type    = "MX"
   ttl     = 3600
-  records = ["0 141223073.pamx1.hotmail.com."]
+  records = [
+    "10 in1-smtp.messagingengine.com",
+    "20 in2-smtp.messagingengine.com"
+  ]
 }
 
-resource "aws_route53_record" "outlook_autodiscover_cname" {
+resource "aws_route53_record" "fastmail_dkim_1" {
   zone_id = aws_route53_zone.gjhr_me.zone_id
-  name    = "autodiscover.gjhr.me"
+  name    = "fm1._domainkey.gjhr.me"
   type    = "CNAME"
   ttl     = 3600
-  records = ["autodiscover.outlook.com."]
+  records = ["fm1.gjhr.me.dkim.fmhosted.com"]
+}
+
+resource "aws_route53_record" "fastmail_dkim_2" {
+  zone_id = aws_route53_zone.gjhr_me.zone_id
+  name    = "fm2._domainkey.gjhr.me"
+  type    = "CNAME"
+  ttl     = 3600
+  records = ["fm2.gjhr.me.dkim.fmhosted.com"]
+}
+
+resource "aws_route53_record" "fastmail_dkim_3" {
+  zone_id = aws_route53_zone.gjhr_me.zone_id
+  name    = "fm3._domainkey.gjhr.me"
+  type    = "CNAME"
+  ttl     = 3600
+  records = ["fm3.gjhr.me.dkim.fmhosted.com"]
 }
 
 # Temporary migration records
