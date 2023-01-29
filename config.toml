@@ -3,6 +3,9 @@ languageCode = 'en-gb'
 title = "George Richardson's Blog"
 description = 'Hopefully an interesting blog...'
 uglyurls = true
+rssLimit = 5
+[Author]
+  name = 'George Richardson'
 
 markup.goldmark.renderer.unsafe = true
 
