@@ -25,7 +25,7 @@
   </author>{{end}}
   <generator>Hugo -- gohugo.io</generator>{{ range $pages }}
   <entry>
-    <title>{{ .Title }}></title>
+    <title>{{ .Title }}</title>
     <link href="{{ .Permalink }}"/>
     <id>{{ .Permalink }}</id>{{ with $.Site.Author.name }} 
     <author>
