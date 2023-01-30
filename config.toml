@@ -16,6 +16,19 @@ markup.goldmark.renderer.unsafe = true
 [outputFormats.RSS]
 mediatype = "application/rss"
 baseName = "feed"
+[outputFormats.newsletter]
+name = "newsletter"
+mediatype = "application/xml"
+path = "newsletter"
+baseName = "newsletter"
+isPlainText = true
+rel = "alternate"
+isHTML = false
+noUgly = true
+permalinkable = false
+
+[outputs]
+  home = ['HTML', 'RSS', 'newsletter']
 
 [deployment]
 [[deployment.targets]]
