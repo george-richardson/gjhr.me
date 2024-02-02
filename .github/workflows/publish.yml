@@ -8,6 +8,7 @@ on:
       - infra
   schedule: 
     - cron: '0 9 * * *'
+  workflow_dispatch:
 
 permissions:
   id-token: write
